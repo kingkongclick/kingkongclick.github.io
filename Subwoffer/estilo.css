@@ -49,7 +49,7 @@ html{
 }
 .nav-responsive{
     background-color: #ca7f0d;
-    color:rgb(176, 110, 10);
+    color:rgb(80, 51, 8);
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -367,6 +367,21 @@ html{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.spotify {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.spotify  h2{
+    background-color: #965d08;
+    font-size: 48px;
+    font-family: 'Sans-serif';
+    text-align: center;
+    padding: 20px 0;
+}
+.spotify .contenido-seccion {
+    background-color: #030302;
 }
 footer{
     background-color: #252A2E;
