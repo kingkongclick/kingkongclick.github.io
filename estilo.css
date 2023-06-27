@@ -274,6 +274,11 @@ eventos{
     text-align: center;
     padding: 20px 0;
 }
+.spotify {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .spotify  h2{
     background-color: #965d08;
     font-size: 48px;
