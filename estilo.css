@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/* MENU */
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Sans-serif';
+    font-size: 40px;
+    color: #965d08;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #965d08;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: #1CB698;
+}
+.nav-responsive{
+    background-color: #ca7f0d;
+    color:rgb(118, 3, 3);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/* SECCION I N I C I O */
+.inicio{
+    background: linear-gradient(to top, rgba(13, 34, 48, 0.8), rgba(30,35,38,1)),
+    url(img/albumkingisback.jpg);
+    background-position: center;
+    height: 112vh;
+    color: #965d08;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.inicio .contenido-banner{
+    padding: 0px;
+    background-color: #1e2326;
+    max-width: 18%;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    filter: drop-shadow(8px 6px 4px #FF995080);
+    height: 0px;
+}
+.inicio .contenido-banner img{
+    margin-top: 20px;
+    border: 5px solid #cb890f;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+    margin-top: 10px;
+    font-size: 100%;
+    font-family: 'Sans-serif';
+
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+    font-family: 'Sans-serif';
+}
+.inicio .contenido-banner .redes a{
+    color: #965d08;
+    display: flexbox;
+    text-decoration: none;
+    border: 1px solid #965d08;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenido-banner .redes a:hover{
+    background-color: #965d08;
+}
+/* SECCION TEAM */
+.team img:hover {
+    cursor: url(img/cohete.png), auto;
+    width: 250px;
+    opacity: 1;
+    filter: contrast(120%);
+    transition: .5s ease;
+    transform: perspective(500px)
+        rotate(45deg);
+}
+.team{
+    display: flex;
+    width: 100%;
+    height: 900px;
+}
+.team img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .9;
+}
+/* SECCION EVENTOS */
+eventos{
+    background-color: #965d08;
+    color: rgb(189, 172, 17);
+    padding: 50px 20px;
+}
+.eventos{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/october-6-NASA.jpg);
+    background-position: 0%;
+    height: 82vh;
+    color: #965d08;
+    display: flex;
+    align-items: center;
+}
+.eventos .contenido-seccion{
+    max-width: 100%;
+    margin: auto;
+    filter: drop-shadow(8px 6px 4px #FF995080);
+}
+.eventos h2{
+    font-size: 48px;
+    font-family: 'Sans-serif';
+    text-align: center;
+    padding: 20px 0;
+}
+.eventos .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.eventos .galeria .proyecto{
+    position: relative;
+    max-width: 300px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.eventos .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.eventos .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(#965d08, rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+    
+}
+.eventos .galeria .proyecto .overlay h3{
+    font-family: 'Sans-serif';
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.eventos .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.eventos .galeria .proyecto .overlay:hover h3{
+    font-family: 'Sans-serif';
+    margin-bottom: 0px;
+}
+/* SECCION ALBUMES */
+.portfolio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/fondo.jpg);
+    color: #965d08;
+    padding: 50px 20px;
+}
+.portfolio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio h2{
+    font-size: 48px;
+    font-family: 'Sans-serif';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolio .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portfolio .galeria .proyecto img{
+    width: 100%;
+    display: block;
+    filter: drop-shadow(8px 6px 4px #FF995080);
+}
+.portfolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(#965d08, rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3 {
+    font-family: 'Sans-serif';
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.portfolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.portfolio .galeria .proyecto .overlay:hover h3{
+    font-family: 'Sans-serif';
+    margin-bottom: 0px;
+}
+.registro{
+    background-color: #030302;
+}
+.registro h2{
+    background-color: #965d08;
+    font-size: 48px;
+    font-family: 'Sans-serif';
+    text-align: center;
+    padding: 20px 0;
+}
+.spotify  h2{
+    background-color: #965d08;
+    font-size: 48px;
+    font-family: 'Sans-serif';
+    text-align: center;
+    padding: 20px 0;
+}
+.spotify .contenido-seccion {
+    background-color: #030302;
+}
+/* SECCIÓN GALERIA INSTAGRAM FACEBOOK */
+.instagram {
+    background-color: #030302;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* SECCIÓN PUBLICIDAD */
+.publicidad{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/october-6-NASA.jpg);
+    background-position: 0%;
+    height: 112vh;
+    color: #965d08;
+    display: flex;
+    align-items: center;
+}
+.publicidad .contenido-seccion{
+    max-width: 100%;
+    margin: auto;
+    filter: drop-shadow(8px 6px 4px #FF995080);
+}
+.publicidad h2{
+    font-size: 48px;
+    font-family: 'Sans-serif';
+    text-align: center;
+    padding: 20px 0;
+}
+.publicidad .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.publicidad .galeria .proyecto{
+    position: relative;
+    max-width: 300px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.publicidad .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.publicidad .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(#965d08, rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.publicidad .galeria .proyecto .overlay h3{
+    font-family: 'Sans-serif';
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.publicidad .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.publicidad .galeria .proyecto .overlay:hover h3{
+    font-family: 'Sans-serif';
+    margin-bottom: 0px;
+}
+footer{
+    background-color: #252A2E;
+    color: #965d08;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+    display: contents;
+    text-align: center;
+}
+footer .redes a{
+    color: #965d08;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #965d08;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.redes a:hover{
+    background-color: #965d08;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #965d08;
+    color: rgb(14, 115, 78);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/* SECCION PUBLICIDAD */
+.publicidad {
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/october-6-NASA.jpg);
+    background-position: 0%;
+    height: 112vh;
+    color: rgb(194, 119, 8);
+    display: flex;
+    align-items: center;
+}    
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid rgb(153, 117, 8);
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
